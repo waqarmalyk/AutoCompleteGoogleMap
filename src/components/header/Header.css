@@ -1,0 +1,17 @@
+.title {
+    text-align: center;
+    font-weight: var(--weight3);
+    padding: 30px;
+    background-color: var(--green);
+    color: var(--veryLightGray);
+    margin-bottom: 0.5rem;
+    line-height: 35px;
+}
+
+span {
+    color: rgb(114, 114, 114);
+}
+
+span:hover {
+    color: var(--varyDarkBlue);
+}

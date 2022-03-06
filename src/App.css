@@ -1,8 +1,32 @@
-.main-container {
-  margin: 10%;
-  padding: 15%;
-  margin-top: 5%;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&family=Poppins:wght@400;500;700&display=swap');
+
+
+:root {
+  --black: hsl(0, 0%, 1%);
+  --varyDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --green: #4CAF50;
+  --weight1: 200;
+  --weight2: 400;
+  --weight3: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.container {
   padding-top: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

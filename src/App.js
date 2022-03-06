@@ -1,11 +1,12 @@
-import LocationFinder from "./locationFinder";
-import Swipe from "./swiper/index";
+import LocationFinder from "./components/locationFinder";
+import Header from "./components/header/Header";
+import "./App.css";
 
 function App() {
   return (
     <div className="main-container">
+      <Header />
       <LocationFinder />
-      <Swipe />
     </div>
   );
 }

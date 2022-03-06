@@ -1,0 +1,8 @@
+.main-container {
+  margin: 10%;
+  padding: 15%;
+  margin-top: 5%;
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+}

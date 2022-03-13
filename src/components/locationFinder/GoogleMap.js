@@ -21,7 +21,9 @@ const GoogleMap = ({ lat, lng, name }) => {
   return (
     <div style={{ height: "50vh", width: "100%" }}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyDR3E0Ko3uYrfQaqX9964woDyJ8NoDn4tg" }}
+        bootstrapURLKeys={{
+          key: "AIzaSyDR3E0Ko3uYrfQaqX9964woDyJ8NoDn4tg",
+        }}
         defaultCenter={center}
         defaultZoom={ZOOM}
         yesIWantToUseGoogleMapApiInternals={true}

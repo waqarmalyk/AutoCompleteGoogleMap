@@ -1,13 +1,17 @@
 import LocationFinder from "./components/locationFinder";
 import Header from "./components/header/Header";
 import "./App.css";
+import SwiperField from "./components/swiper";
 
 function App() {
   return (
-    <div className="main-container">
+    <>
       <Header />
-      <LocationFinder />
-    </div>
+      <div className="container-body">
+        <LocationFinder />
+        <SwiperField />
+      </div>
+    </>
   );
 }
 

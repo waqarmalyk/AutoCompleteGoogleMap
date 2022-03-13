@@ -9,7 +9,7 @@ export const loadScript = (callback) => {
 export const handleScriptLoad = (autoCompleteRef, handlePlaceSelect) => {
   const autoCompleteField = new window.google.maps.places.Autocomplete(
     autoCompleteRef.current,
-    { types: ["establishment"] }
+    { types: ["address"] }
   );
   autoCompleteField.setFields([
     "address_components",

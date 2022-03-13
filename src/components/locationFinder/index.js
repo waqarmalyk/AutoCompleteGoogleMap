@@ -1,19 +1,26 @@
 import React, { useEffect, useRef, useCallback, useState } from "react";
-import GoogleMap from "./GoogleMap";
 import { loadScript, handleScriptLoad } from "./loadScripts";
+import AddressForm from "./AddressForm";
+import getCompleteAddress from "./getCompleteAddress";
+import GoogleMap from "./GoogleMap";
 import "./LocationFinder.css";
 
 const LocationFinder = () => {
   const [isInputPresent, setIsInputPresent] = useState(false);
   const [addressAndLocation, setAddressAndLocation] = useState();
+  const [displayForm, setDisplayForm] = useState(false);
   const autoCompleteRef = useRef(null);
 
   const handlePlaceSelect = useCallback((autoCompleteField) => {
     const addressObject = autoCompleteField.getPlace();
+    const completeAddress = getCompleteAddress(
+      addressObject?.address_components
+    );
     const query = {
       address: addressObject.formatted_address,
       location: addressObject.geometry.location,
       name: addressObject.name,
+      ...completeAddress,
     };
     setAddressAndLocation(query);
   }, []);
@@ -22,22 +29,32 @@ const LocationFinder = () => {
     event.target.value ? setIsInputPresent(true) : setIsInputPresent(false);
   };
 
+  const handleEditClick = () => {
+    setIsInputPresent((prev) => !prev);
+    setDisplayForm((prev) => !prev);
+  };
+
   useEffect(() => {
     loadScript(() => handleScriptLoad(autoCompleteRef, handlePlaceSelect));
   }, [handlePlaceSelect]);
 
   return (
-    <div className="container">
+    <div className="sub-container">
       <div className="search-container">
-        <label className="search-title">Search a Location</label>
-        <input
-          className=""
-          name="search-locations"
-          type="text"
-          onChange={handleChange}
-          ref={autoCompleteRef}
-        />
-
+        <div>
+          <label className="search-title">Search a Location</label>
+          <input
+            className=""
+            name="search-locations"
+            type="text"
+            onChange={handleChange}
+            ref={autoCompleteRef}
+          />
+          <button className="edit" onClick={handleEditClick}>
+            {displayForm ? "Address search" : "Edit"}
+          </button>
+        </div>
+        {displayForm && <AddressForm addressObject={addressAndLocation} />}
         {addressAndLocation?.address && isInputPresent && (
           <>
             <div className="address">

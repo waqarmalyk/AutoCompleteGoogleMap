@@ -7,6 +7,7 @@
   --grayishBlue: hsl(229, 6%, 66%);
   --veryLightGray: hsl(0, 0%, 98%);
   --green: #4CAF50;
+  --blue: #0d5381;
   --weight1: 200;
   --weight2: 400;
   --weight3: 600;
@@ -23,10 +24,13 @@ body {
 }
 
 
-.container {
-  padding-top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.container-body {
+  width: 100%;
+  display: inline-flex;
+}
+
+button {
+  color: var(--veryLightGray);
+  border: none;
+  cursor: pointer;
 }

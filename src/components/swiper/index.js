@@ -36,10 +36,10 @@ const SwiperField = ({ list = DEFAULT_LIST }) => {
   }, [list]);
 
   const updateTheList = (newValue) => {
-    // if (listToDisplay.indexOf(newValue) !== -1) {
-    //   alert("Value already exist");
-    //   return;
-    // }
+    if (listToDisplay.indexOf(newValue !== -1)) {
+      alert("Value already exists");
+      return;
+    }
     const newList = [...listToDisplay, newValue];
     setListToDisplay(newList);
     setDisplayAddForm((prev) => !prev);

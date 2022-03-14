@@ -1,0 +1,169 @@
+.sub-container {
+    width: 50%;
+}
+
+.swiper {
+    margin-bottom: 0;
+    height: 100px;
+}
+
+.swiper::before {
+    content: "";
+    width: 20px;
+    left: 0;
+    background: linear-gradient(90deg, #fff, hsla(0, 0%, 100%, 0));
+    display: block;
+    position: absolute;
+    width: 25%;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    pointer-events: none;
+    max-width: 150px;
+}
+
+.swiper::after {
+    content: "";
+    width: 20px;
+    right: 0;
+    background: linear-gradient(270deg, #fff, hsla(0, 0%, 100%, 0));
+    content: "";
+    display: block;
+    position: absolute;
+    width: 25%;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    pointer-events: none;
+    max-width: 150px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide-active {
+    color: var(--green);
+}
+
+.active-container {
+    flex-direction: row;
+}
+
+.current-choice {
+    font-size: large;
+    font-weight: bold;
+    color: var(--green);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.selected-number {
+    padding: 20px;
+    padding-bottom: 0;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.per-month {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--green);
+    display: flex;
+    justify-content: center;
+}
+
+.non-active {
+    font-size: larger;
+}
+
+.card {
+    margin: 20px;
+    height: 100px;
+    box-shadow: 0.75px 0.75px 4px var(--green);
+    border-left: 7px solid var(--green);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pay {
+    display: flex;
+    flex-direction: column;
+}
+
+.pay-per-month {
+    padding-left: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--green);
+}
+
+.pay-selected-number {
+    padding: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 35px;
+}
+
+.edit-button {
+    margin-top: auto;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    color: var(--green);
+}
+
+.save-button {
+    margin-top: auto;
+    padding: 20px;
+    font-size: 20px;
+    color: var(--green);
+    text-align: center;
+}
+
+.custom-number {
+    margin: 20px;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 20px;
+}
+
+.add {
+    padding: 10px;
+    font-size: 20px;
+    color: var(--green);
+    text-align: center;
+    border: none;
+}
+
+.submit {
+    margin-top: 10px;
+    color: white;
+    padding: 5px;
+    background-color: var(--green);
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+}
+
+.submit:hover {
+    box-shadow: 0.75px 0.75px 4px var(--green);
+}
